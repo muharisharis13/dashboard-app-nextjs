@@ -1,0 +1,66 @@
+[
+  {
+    "icon":"bx-home-circle",
+    "title":"Dashboard",
+    "data-i":"Analytic",
+    "href":"/dashboard",
+    "sub-menu":[]
+  },
+  {
+    "icon":"bx-transfer",
+    "title":"Transaction",
+    "data-i":"Analytic",
+    "href":"javascript:void(0);",
+    "sub-menu":[
+      {
+        "title":"Selling",
+        "href":"/transaction/selling"
+
+      }
+    ]
+  },
+  {
+    "icon":"bx bxl-dropbox",
+    "title":"Inventory",
+    "data-i":"Analytic",
+    "href":"javascript:void(0);",
+    "sub-menu":[
+      {
+        "title":"Product",
+        "href":"/inventory/product"
+      },
+      {
+        "title":"Category",
+        "href":"/inventory/category"
+      },
+      {
+        "title":"Barang Retur",
+        "href":"/inventory/retur"
+      }
+    ]
+  },
+  {
+    "icon":"bx-collection",
+    "title":"Utility",
+    "data-i":"Utility",
+    "href":"javascript:void(0);",
+    "sub-menu":[
+      {
+        "title":"Debt",
+        "href":"/utility/debt"
+      }
+    ]
+  },
+  {
+    "icon":"bx-cog",
+    "title":"Settings",
+    "data-i":"Account Settings",
+    "href":"javascript:void(0);",
+    "sub-menu":[
+      {
+        "title":"Account",
+        "href":"/dashboard/account"
+      }
+    ]
+  }
+]
