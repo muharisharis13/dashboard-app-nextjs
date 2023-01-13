@@ -1,6 +1,26 @@
-import { Breadcrumb } from "."
+import { Breadcrumb } from ".";
+import { Axios } from "../utils";
+import Cookies from "js-cookie";
 
 const header = () => {
+  const btnLogout = async () => {
+    const body = {
+      user_id: Cookies.get("_id"),
+    };
+    await Axios.post(`auth/logout`, body).then((res) => {
+      const data = res.data;
+      console.log({ data });
+      if (data.code === 200) {
+        Cookies.remove("username");
+        Cookies.remove("role_id");
+        Cookies.remove("_id");
+        Cookies.remove("token");
+        Cookies.remove("refreshToken");
+        window.location.href = "/login";
+      }
+    });
+  };
+
   return (
     <nav
       className="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
@@ -70,7 +90,7 @@ const header = () => {
                 <div className="dropdown-divider"></div>
               </li>
               <li>
-                <a className="dropdown-item" href="#" >
+                <a className="dropdown-item" href="#" onClick={btnLogout}>
                   <i className="bx bx-power-off me-2"></i>
                   <span className="align-middle">Log Out</span>
                 </a>
@@ -81,7 +101,7 @@ const header = () => {
         </ul>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default header
+export default header;

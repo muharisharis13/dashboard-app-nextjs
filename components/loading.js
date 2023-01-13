@@ -7,7 +7,7 @@ const Loading = () => {
 
   return (
     <div
-      show={loading}
+      show={loading.toString()}
       style={{
         display: loading ? "flex" : "none",
         width: "100%",

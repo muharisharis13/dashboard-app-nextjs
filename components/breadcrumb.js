@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 const Breadcrumbs = () => {
   const [pathname, setPathname] = useState([]);
@@ -23,6 +24,9 @@ const Breadcrumbs = () => {
 
   return (
     <div className="fw-bold mb-0">
+      <Head>
+        <title>{lastPathname}</title>
+      </Head>
       {pathname?.map((item, idx) => (
         <span key={idx} className="text-muted fw-light text-capitalize">
           {item} /{" "}

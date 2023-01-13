@@ -13,8 +13,18 @@
     "href":"javascript:void(0);",
     "sub-menu":[
       {
+        "title":"Purchasing",
+        "href":"/transaction/purchasing"
+
+      },
+      {
         "title":"Selling",
         "href":"/transaction/selling"
+
+      },
+      {
+        "title":"Selling Cashier",
+        "href":"/transaction/selling_cashier"
 
       }
     ]
@@ -32,6 +42,10 @@
       {
         "title":"Category",
         "href":"/inventory/category"
+      },
+      {
+        "title":"UOM",
+        "href":"/inventory/uom"
       },
       {
         "title":"Barang Retur",
@@ -59,7 +73,7 @@
     "sub-menu":[
       {
         "title":"Account",
-        "href":"/dashboard/account"
+        "href":"/settings/account"
       }
     ]
   }

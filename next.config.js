@@ -1,12 +1,12 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  fallback: false,
   async redirects() {
     return [
       {
         source: "/dashboard",
         destination: "/",
-        permanent: true,
+        permanent: false,
       },
     ];
   },

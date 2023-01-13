@@ -6,18 +6,42 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "model:generate": "env-cmd sequelize-cli model:generate",
+    "migrate": "env-cmd sequelize-cli db:migrate",
+    "migrate:rollback": "env-cmd sequelize-cli db:migrate:undo",
+    "migrate:rollback:all": "env-cmd sequelize-cli db:migrate:undo:all"
   },
   "dependencies": {
+    "axios": "^1.2.0",
+    "bootstrap-select": "^1.13.18",
+    "chroma-js": "^2.4.2",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.4",
+    "http-status": "^1.5.3",
+    "jquery": "^3.6.3",
+    "js-cookie": "^3.0.1",
+    "jsdom": "^20.0.3",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "lodash": "^4.17.21",
     "next": "13.0.4",
+    "next-auth": "^4.18.0",
+    "query-string": "^8.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.39.4",
-    "styled-components": "^5.3.6"
+    "react-select": "^5.7.0",
+    "react-select2-wrapper": "^1.0.4-beta6",
+    "serverless-mysql": "^1.5.4",
+    "styled-components": "^5.3.6",
+    "sweetalert2": "^11.6.16"
   },
   "resolutions": {
     "styled-components": "^5"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.26",
+    "typescript": "4.9.4"
   }
 }

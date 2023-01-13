@@ -2,7 +2,6 @@ import Layout from "../components/layout";
 import Script from "next/script";
 import ReactHookFormProvider from "../useformContext/index";
 import { Loading } from "../components";
-
 function MyApp({ Component, pageProps }) {
   return (
     <ReactHookFormProvider>
