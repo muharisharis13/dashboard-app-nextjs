@@ -1,7 +1,7 @@
 import axios from "axios";
 import Cookies from "./cookie"
 
-const baseURL = `${process.env.NEXT_PUBLIC_BASE_URL}api`;
+const baseURL = `https://dashboard-app-nextjs.vercel.app/api`;
 const timeout = 16000;
 
 const instance = axios.create({
