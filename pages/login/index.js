@@ -1,8 +1,10 @@
 import { useForm } from "react-hook-form";
 import { Axios, Cookie } from "../../utils";
 import { useRouter } from "next/router";
+import { useFormContext } from "react-hook-form"
 
 const Login = () => {
+  const { setValue: setValueContext } = useFormContext();
   const { register, handleSubmit } = useForm({
     defaultValues: {
       username: "",
@@ -13,6 +15,7 @@ const Login = () => {
   const router = useRouter();
 
   const btnLogin = async (e) => {
+    setValueContext("loading", true)
     await Axios.post(`/auth/login`, {
       username: e.username,
       password: e.password,
@@ -45,7 +48,10 @@ const Login = () => {
       } else {
         alert("username or password wrong !");
       }
-    });
+    })
+      .finally(() => {
+        setValueContext("loading", false)
+      })
   };
 
   return (

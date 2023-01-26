@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "start-server": "NODE_ENV=production node server.js",
     "lint": "next lint",
     "model:generate": "env-cmd sequelize-cli model:generate",
     "migrate": "env-cmd sequelize-cli db:migrate",
